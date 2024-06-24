@@ -47,3 +47,23 @@ void clear(byte* buf, unsigned int size) {
   unsigned int i;
   for (i = 0; i < size; i++) buf[i] = 0;
 }
+
+void splitSentence(char* input, char* output1, char* output2, char splitter) {
+  int i, j, inputLen, currentLen;
+  inputLen = strlen(input); 
+  j = currentLen = 0;
+
+  for (i = 0; i < inputLen; ++i) {
+    if (input[i] == splitter) {
+      output1[currentLen] = '\0';
+      j++;
+      currentLen = 0;
+      continue;
+    }
+    if (!j)
+      output1[currentLen++] = input[i];
+    else 
+      output2[currentLen++] = input[i];
+  }
+  output2[currentLen] = '\0';
+}

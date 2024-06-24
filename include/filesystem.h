@@ -62,5 +62,6 @@ enum fs_return {
 void fsInit();
 void fsRead(struct file_metadata* metadata, enum fs_return* status);
 void fsWrite(struct file_metadata* metadata, enum fs_return* status);
+void fsStatus(enum fs_return* status);
 
 #endif // __FILESYSTEM_H__

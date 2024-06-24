@@ -17,4 +17,6 @@ void clear(byte* buf, unsigned int size);
  * ...
  */
 
+void splitSentence(char* input, char* output1, char* output2, char splitter);
+
 #endif // __STD_LIB_H__
